@@ -35,7 +35,6 @@
         }
         .hero {
             position: relative;
-            background: url('hero.jpg') no-repeat center center/cover; 
             height: 80vh;
             color: white;
         }
@@ -61,6 +60,9 @@
         .hero p {
             font-size: 1.5rem;
         }
+        .carousel-item {
+        transition: transform 1.5s ease-in-out; /* Transisi lebih halus */
+        }
         .product-card img {
             width: 100%; 
             height: 300px; 
@@ -71,6 +73,17 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: scale(1.1); /* Membesar */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+        }
+
         .footer {
             background-color: #00281C;
             padding: 20px 0;
@@ -85,7 +98,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="photo/logo.JPEG" alt="Sweet Little Garden"> 
+                <img src="photo-content/logo.JPEG" alt="Sweet Little Garden"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,20 +118,40 @@
                         <a class="nav-link" href="proses/order.php">Contact</a>
                     </li>
                 </ul>
-                <div class="d-flex ms-3">
-                    <a href="#" class="btn btn-link"><i class="bi bi-person"></i></a>
-                    <a href="#" class="btn btn-link"><i class="bi bi-cart"></i></a>
-                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content text-white">
-            <h1>Sweet Little Garden</h1>
-            <p>Your Destination for Premium Floral Arrangements</p>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero" style="background: url('photo-content/hero1.jpeg') no-repeat center center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-white">
+                        <h1>Sweet Little Garden</h1>
+                        <p>Your Destination for Premium Floral Arrangements</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero" style="background: url('photo-content/hero2.jpeg') no-repeat center center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-white">
+                        <h1>Beautiful Flowers</h1>
+                        <p>Perfect for Every Occasion</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero" style="background: url('photo-content/hero3.jpeg') no-repeat center center/cover;">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-white">
+                        <h1>Unique Arrangements</h1>
+                        <p>Handcrafted with Love</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

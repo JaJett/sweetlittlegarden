@@ -20,7 +20,7 @@ if (isset($_GET['id_barang'])) {
         // Hapus data barang dari database
         $deleteQuery = "DELETE FROM barang WHERE id_barang = '$id_barang'";
         if ($db->query($deleteQuery) === TRUE) {
-            header("Location: ../view/dashboard.php?message=deleted");
+            header("Location: ../view/index.php?message=deleted");
         } else {
             echo "Error: " . $db->error;
         }

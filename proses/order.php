@@ -1,19 +1,28 @@
 <?php
-
-// Nomor WhatsApp tujuan (gunakan format internasional tanpa tanda '+' atau '0' di awal)
+// Nomor WhatsApp tujuan
 $nomor_wa = '6285156022194'; // Ganti dengan nomor WhatsApp tujuan
 
-// Pesan default yang akan dikirim
-$pesan = 'Hi, saya ingin pesan.'; // Ganti dengan pesan yang Anda inginkan
+// Ambil data dari URL parameter
+$foto = isset($_GET['foto']) ? $_GET['foto'] : '';
+$kode = isset($_GET['kode']) ? $_GET['kode'] : '';
 
-// Encode pesan agar sesuai dengan URL
+// Buat pesan yang akan dikirimkan
+$pesan = "Hi, saya ingin pesan produk berikut:\n";
+$pesan .= "Kode Produk: " . $kode . "\n";
+$pesan .= "Lihat foto produk di sini: [URL_FOTO]";
+
+// Ganti [URL_FOTO] dengan path lengkap foto produk
+$url_foto = "https://yourdomain.com/photo/" . urlencode($foto); // Ganti 'yourdomain.com' dengan domain Anda
+$pesan = str_replace("[URL_FOTO]", $url_foto, $pesan);
+
+// Encode pesan untuk URL WhatsApp
 $pesan_terencode = urlencode($pesan);
 
-// Buat URL direct link ke WhatsApp
+// Buat URL WhatsApp
 $url_whatsapp = "https://wa.me/$nomor_wa?text=$pesan_terencode";
 
-// Redirect pengguna ke URL WhatsApp
+// Redirect ke WhatsApp
 header("Location: $url_whatsapp");
 exit();
-
 ?>
+

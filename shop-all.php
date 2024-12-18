@@ -11,6 +11,10 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #FCD7E2; /* Warna background pink */
+            padding-top: 70px; /* Memberikan jarak dari atas untuk konten utama */
+        }
+        h3.text-center {
+            margin-top: 20px; /* Menambahkan jarak ekstra di bagian judul */
         }
         .navbar {
             background-color: #00281C !important; /* Warna hijau untuk navbar */
@@ -50,6 +54,8 @@
             color: white;
             
         }
+
+        
     </style>
 </head>
 <body>
@@ -57,7 +63,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="photo/logo.JPEG" alt="Sweet Little Garden"> 
+                <img src="photo-content/logo.JPEG" alt="Sweet Little Garden"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -77,10 +83,6 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-                <div class="d-flex ms-3">
-                    <a href="#" class="btn btn-link"><i class="bi bi-person"></i></a>
-                    <a href="#" class="btn btn-link"><i class="bi bi-cart"></i></a>
-                </div>
             </div>
         </div>
     </nav>
@@ -102,10 +104,15 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">' . htmlspecialchars($product['nama']) . '</h5>
                             <p class="text-muted">Rp ' . number_format($product['harga'], 2, ',', '.') . '</p>
+                            <!-- Link Order -->
+                            <a href="proses/order.php?foto=' . urlencode($product['foto']) . '&kode=' . urlencode($product['nama']) . '" class="btn btn-success">
+                                Order Now
+                            </a>
                         </div>
                     </div>
                 </div>
                 ';
+                
             }
             ?>
         </div>

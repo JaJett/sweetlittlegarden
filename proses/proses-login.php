@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['posisi'] = $user['posisi']; // owner atau admin
 
             // Redirect ke dashboard
-            header('Location: ../view/dashboard.php');
+            header('Location: ../view/index.php');
             exit;
         } else {
             // Jika password salah, kembali ke halaman login dengan pesan error
