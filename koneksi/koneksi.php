@@ -1,9 +1,9 @@
 <?php
 
     $server = "localhost";
-    $user = "root";
-    $password = "";
-    $nama_database = "flower";
+    $user = "swee_flower";
+    $password = "Pn6DxJ4x4%ycpup^";
+    $nama_database = "swee_flower";
 
     $db = mysqli_connect($server,$user,$password,$nama_database);
 
