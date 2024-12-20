@@ -15,6 +15,9 @@
         .navbar {
             background-color: #00281C !important; /* Warna hijau untuk navbar */
         }
+        .navbar-toggler-icon {
+            color: white;
+        }
         .navbar-brand img {
             height: 50px;
             width: 50px; 
@@ -95,7 +98,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="photo-content/logo.JPEG" alt="Sweet Little Garden"> 

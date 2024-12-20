@@ -25,6 +25,9 @@
             border-radius: 50%; 
             transition: transform 0.3s ease; 
         }
+        .navbar-toggler-icon {
+            color: white;
+        }
         .navbar-brand img:hover {
             transform: scale(1.3); 
         }
@@ -60,7 +63,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="photo-content/logo.JPEG" alt="Sweet Little Garden"> 

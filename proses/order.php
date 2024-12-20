@@ -12,7 +12,7 @@ $pesan .= "Kode Produk: " . $kode . "\n";
 $pesan .= "Lihat foto produk di sini: [URL_FOTO]";
 
 // Ganti [URL_FOTO] dengan path lengkap foto produk
-$url_foto = "https://yourdomain.com/photo/" . urlencode($foto); // Ganti 'yourdomain.com' dengan domain Anda
+$url_foto = "https://sweetlitlegarden.mib.my.id/photo/" . urlencode($foto); // Ganti 'yourdomain.com' dengan domain Anda
 $pesan = str_replace("[URL_FOTO]", $url_foto, $pesan);
 
 // Encode pesan untuk URL WhatsApp
